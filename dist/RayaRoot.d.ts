@@ -1,6 +1,6 @@
 /// <reference types="react" />
-import { Component } from 'react';
-import { RayaStore } from './RayaStore';
+import { Component } from "react";
+import { RayaStore } from "./RayaStore";
 export declare class RayaRoot<RState> extends Component<{
     initialRState: RState;
 }, {}> {

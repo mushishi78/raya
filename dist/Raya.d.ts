@@ -1,6 +1,6 @@
 /// <reference types="react" />
-import { Component, ReactElement } from 'react';
-import { RayaStore } from './RayaStore';
+import { Component, ReactElement } from "react";
+import { RayaStore } from "./RayaStore";
 export interface RayaProps<RState> {
     render: (store: RayaStore<RState>) => ReactElement<any>;
 }

@@ -12,10 +12,11 @@ export function createStore<RState>(initialRState: RState): RayaStore<RState> {
   return {
     getRState: () => rState,
     setRState: newRState => {
-	    rState = newRState;
+      rState = newRState;
       listeners.forEach(listener => listener());
     },
     subscribe: listener => listeners.push(listener),
-    unsubscribe: listener => listeners = listeners.filter(item => item !== listener)
+    unsubscribe: listener =>
+      (listeners = listeners.filter(item => item !== listener))
   };
 }

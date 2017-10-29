@@ -10,7 +10,9 @@ function createStore(initialRState) {
             listeners.forEach(function (listener) { return listener(); });
         },
         subscribe: function (listener) { return listeners.push(listener); },
-        unsubscribe: function (listener) { return listeners = listeners.filter(function (item) { return item !== listener; }); }
+        unsubscribe: function (listener) {
+            return (listeners = listeners.filter(function (item) { return item !== listener; }));
+        }
     };
 }
 exports.createStore = createStore;
